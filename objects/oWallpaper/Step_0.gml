@@ -1,8 +1,10 @@
 /// @desc Create Surfaces & Manage Size
 
 // Sizing
-width = window_get_width();
-height = window_get_height();
+width = browser_width;
+height = browser_height;
+
+window_set_size(width,height);
 
 // Surfaces
 if (!surface_exists(surfaceWorld)) surfaceWorld = surface_create(room_width,room_height);
