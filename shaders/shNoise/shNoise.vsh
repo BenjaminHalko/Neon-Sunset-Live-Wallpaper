@@ -1,5 +1,5 @@
 attribute vec3 in_Position;
-attribute vec2 in_Texcoord;
+attribute vec2 in_TextureCoord;
 
 varying vec4 v_TexCoord;
 varying vec4 v_TexCoordGlitch;
@@ -18,9 +18,9 @@ void main() {
 	float aspect = g_TextureResolution.x / g_TextureResolution.y;
 	
 	float t = fract(g_Time);
-	v_TexCoord = in_Texcoord.xyxy;
-	v_TexCoordNoise.xy = (in_Texcoord.xy + t) * g_NoiseScale;
-	v_TexCoordNoise.zw = (in_Texcoord.xy - t * 2.5) * g_NoiseScale * 0.52;
+	v_TexCoord = in_TextureCoord.xyxy;
+	v_TexCoordNoise.xy = (in_TextureCoord.xy + t) * g_NoiseScale;
+	v_TexCoordNoise.zw = (in_TextureCoord.xy - t * 2.5) * g_NoiseScale * 0.52;
 	v_TexCoordNoise *= vec4(aspect, 1.0, aspect, 1.0);
 
 	v_TexCoordVHSNoise.xy = v_TexCoordNoise.xy * vec2(0.01, 1.0);
@@ -28,7 +28,7 @@ void main() {
 	
 	v_TexCoordNoise.xz *= 0.5;
 	
-	v_TexCoordGlitch = in_Texcoord.xyxy;
+	v_TexCoordGlitch = in_TextureCoord.xyxy;
 	
 	vec3 glitchOffset = smoothstep(-0.5, 0.5, sin(g_Time * vec3(7.0, 13.0, 5.0) * 3.0)) * vec3(0.0003, 0.0003, 0.0002);
 	v_TexCoordGlitch.xz += glitchOffset.xy + vec2(0.0005, -0.0005);
