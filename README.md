@@ -1,2 +1,2 @@
-# Neon-Sunset-Live-Wallpaper
- Wallpaper Engine's "Neon Sunset" wallpaper ported to GameMaker
+## Disclaimer
+Neon Sunset was orginally created for [Wallpaper Engine](https://www.wallpaperengine.io).
