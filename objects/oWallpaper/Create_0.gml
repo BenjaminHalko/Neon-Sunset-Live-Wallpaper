@@ -108,8 +108,14 @@ colGridBack = ColorToArray(colGridBack);
 #endregion
 
 #region Sizing
-width = window_get_width();
-height = window_get_height();
+if (os_type == os_operagx) {
+	width = browser_width;
+	height = browser_height;
+	window_set_size(width,height);
+} else {
+	width = window_get_width();
+	height = window_get_height();
+}
 #endregion
 
 #region Surfaces
