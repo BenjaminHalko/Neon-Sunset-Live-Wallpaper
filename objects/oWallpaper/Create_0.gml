@@ -1,5 +1,79 @@
 /// @desc Setup Scene
 
+#region Wallpaper Config
+wallpaper_set_config([
+	{
+		type: "range",
+		name: "shading",
+		label: "Shading",
+		value: shading,
+		min: 0,
+		max: 2,
+		step: 0.1
+	},
+	{
+		type: "range",
+		name: "noiseFX",
+		label: "Noise effects",
+		value: noiseFX,
+		min: 0,
+		max: 2,
+		step: 0.1
+	},
+	{
+		type: "range",
+		name: "mountainScale",
+		label: "Mountain Scale",
+		value: mountainScale,
+		min: 0,
+		max: 2,
+		step: 0.1
+	},
+	{
+		type: "colour",
+		name: "sunTop",
+		label: "Sun top",
+		value: colSunTop
+	},
+	{
+		type: "colour",
+		name: "sunBottom",
+		label: "Sun bottom",
+		value: colSunBottom
+	},
+	{
+		type: "colour",
+		name: "horizon",
+		label: "Horizon",
+		value: colHorizon
+	},
+	{
+		type: "colour",
+		name: "clouds",
+		label: "Clouds",
+		value: colClouds
+	},
+	{
+		type: "colour",
+		name: "gridNear",
+		label: "Sun near",
+		value: colGridNear
+	},
+	{
+		type: "colour",
+		name: "gridFar",
+		label: "Sun far",
+		value: colGridFar
+	},
+	{
+		type: "colour",
+		name: "gridBack",
+		label: "Sun back",
+		value: colGridBack
+	}
+]);
+#endregion
+
 #region Uniforms
 uBloom_TexelSize = shader_get_uniform(shBloom,"g_TexelSize");
 
@@ -95,16 +169,6 @@ vertex_end(vSunBuffer);
 #region Stars
 partSystemStars = part_system_create(psStars);
 part_system_automatic_draw(partSystemStars,false);
-#endregion
-
-#region Colors
-colSunTop = ColorToArray(colSunTop);
-colSunBottom = ColorToArray(colSunBottom);
-colHorizon = ColorToArray(colHorizon);
-colClouds = ColorToArray(colClouds);
-colGridNear = ColorToArray(colGridNear);
-colGridFar = ColorToArray(colGridFar);
-colGridBack = ColorToArray(colGridBack);
 #endregion
 
 #region Sizing
