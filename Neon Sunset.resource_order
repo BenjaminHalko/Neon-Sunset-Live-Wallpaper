@@ -1,0 +1,18 @@
+{
+  "FolderOrderSettings": [
+    {"name":"Particles","order":4,"path":"folders/Particles.yy",},
+    {"name":"Shaders","order":2,"path":"folders/Shaders.yy",},
+    {"name":"Sprites","order":3,"path":"folders/Sprites.yy",},
+  ],
+  "ResourceOrderSettings": [
+    {"name":"shCloudsBG","order":2,"path":"shaders/shCloudsBG/shCloudsBG.yy",},
+    {"name":"shStars","order":5,"path":"shaders/shStars/shStars.yy",},
+    {"name":"sNoise","order":1,"path":"sprites/sNoise/sNoise.yy",},
+    {"name":"shNoise","order":4,"path":"shaders/shNoise/shNoise.yy",},
+    {"name":"shNeonGrid","order":1,"path":"shaders/shNeonGrid/shNeonGrid.yy",},
+    {"name":"rWallpaper","order":5,"path":"rooms/rWallpaper/rWallpaper.yy",},
+    {"name":"shBloom","order":3,"path":"shaders/shBloom/shBloom.yy",},
+    {"name":"oWallpaper","order":3,"path":"objects/oWallpaper/oWallpaper.yy",},
+    {"name":"Functions","order":4,"path":"scripts/Functions/Functions.yy",},
+  ],
+}
