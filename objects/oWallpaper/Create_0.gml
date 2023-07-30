@@ -1,12 +1,12 @@
 /// @desc Setup Scene
 
-#region Wallpaper Config
+#region Wallpaper Config 
 wallpaper_set_config([
 	{
 		type: "range",
 		name: "shading",
 		label: "Shading",
-		value: shading,
+		value: 1,
 		min: 0,
 		max: 2,
 		step: 0.1
@@ -15,7 +15,7 @@ wallpaper_set_config([
 		type: "range",
 		name: "noiseFX",
 		label: "Noise effects",
-		value: noiseFX,
+		value: 1,
 		min: 0,
 		max: 2,
 		step: 0.1
@@ -24,7 +24,7 @@ wallpaper_set_config([
 		type: "range",
 		name: "mountainScale",
 		label: "Mountain Scale",
-		value: mountainScale,
+		value: 2,
 		min: 0,
 		max: 2,
 		step: 0.1
@@ -33,43 +33,43 @@ wallpaper_set_config([
 		type: "colour",
 		name: "sunTop",
 		label: "Sun top",
-		value: colSunTop
+		value: #FED82E
 	},
 	{
 		type: "colour",
 		name: "sunBottom",
 		label: "Sun bottom",
-		value: colSunBottom
+		value: #F80056
 	},
 	{
 		type: "colour",
 		name: "horizon",
 		label: "Horizon",
-		value: colHorizon
+		value: #164F6A
 	},
 	{
 		type: "colour",
 		name: "clouds",
 		label: "Clouds",
-		value: colClouds
+		value: #081116
 	},
 	{
 		type: "colour",
 		name: "gridNear",
-		label: "Sun near",
-		value: colGridNear
+		label: "Grid near",
+		value: #F7007A
 	},
 	{
 		type: "colour",
 		name: "gridFar",
-		label: "Sun far",
-		value: colGridFar
+		label: "Grid far",
+		value: #00A6FC
 	},
 	{
 		type: "colour",
 		name: "gridBack",
-		label: "Sun back",
-		value: colGridBack
+		label: "Grid background",
+		value: #190019
 	}
 ]);
 #endregion

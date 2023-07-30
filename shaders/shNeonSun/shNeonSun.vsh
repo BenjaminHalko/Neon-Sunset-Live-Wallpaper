@@ -1,8 +1,5 @@
-//
-// Simple passthrough vertex shader
-//
-attribute vec3 in_Position;                  // (x,y,z)
-attribute vec2 in_TextureCoord;              // (u,v)
+attribute vec3 in_Position;
+attribute vec2 in_TextureCoord;
 
 varying vec2 v_TexCoord;
 

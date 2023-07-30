@@ -1,6 +1,5 @@
-attribute vec3 in_Position;                  // (x,y,z)
-//attribute vec3 in_Normal;                  // (x,y,z)     unused in this shader.
-attribute vec2 in_TextureCoord;              // (u,v)
+attribute vec3 in_Position;
+attribute vec2 in_TextureCoord;
 
 varying vec4 v_TexCoord;
 varying vec4 v_Vars;
