@@ -18,6 +18,8 @@ shader_reset();
 
 #region Apply Camera
 var _cam = camera_get_active();
+var _viewMatrix = camera_get_view_mat(_cam);
+var _projMatrix = camera_get_proj_mat(_cam);
 camera_set_view_mat(_cam,matrix_build_lookat(0,0,0,0,0,-0.1,0,-1,0));
 camera_set_proj_mat(_cam,matrix_build_projection_perspective_fov(50,width / height,0.1,10000));
 camera_apply(_cam);
@@ -50,6 +52,12 @@ vertex_submit(vGridBuffer,pr_trianglelist,-1);
 shader_reset();
 #endregion
 
+#region Reset Camera
+camera_set_view_mat(_cam,_viewMatrix);
+camera_set_proj_mat(_cam,_projMatrix);
+camera_apply(_cam);
+#endregion
+
 #region Reset Surface
 surface_reset_target();
 #endregion
@@ -70,6 +78,6 @@ shader_set_uniform_f(uNoise_Time, current_time / 1000);
 shader_set_uniform_f(uNoise_NoiseFX, noiseFX);
 shader_set_uniform_f(uNoise_TextureSize, width, height);
 texture_set_stage(uNoise_Texture, noiseTexture);
-draw_surface_ext(surfaceBloom,0,room_height,1,-1,0,c_white,1);
+draw_surface(surfaceBloom,0,0);
 shader_reset();
 #endregion
